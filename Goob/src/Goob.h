@@ -1,9 +1,8 @@
 #pragma once
 
-// FOr use by Goob Applications
-
+// For use by Goob Applications
 #include "Goob/Application.h"
-#include <stdio.h>
+#include "Goob/Log.h"
 
 // ---- Entry Point ----------------
 #include "Goob/EntryPoint.h"
