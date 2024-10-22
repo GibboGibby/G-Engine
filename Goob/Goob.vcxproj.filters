@@ -4,6 +4,9 @@
     <Filter Include="Goob">
       <UniqueIdentifier>{4CE5857C-381C-870D-E108-6D10CD1E030F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Goob\Events">
+      <UniqueIdentifier>{B0235367-1CD9-CB5C-A5CD-C5331182C260}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Goob.h" />
@@ -16,9 +19,22 @@
     <ClInclude Include="src\Goob\EntryPoint.h">
       <Filter>Goob</Filter>
     </ClInclude>
+    <ClInclude Include="src\Goob\Events\ApplicationEvent.h">
+      <Filter>Goob\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Goob\Events\Event.h">
+      <Filter>Goob\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Goob\Events\KeyEvent.h">
+      <Filter>Goob\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Goob\Events\MouseEvent.h">
+      <Filter>Goob\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Goob\Log.h">
       <Filter>Goob</Filter>
     </ClInclude>
+    <ClInclude Include="src\gbpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Goob\Application.cpp">
@@ -27,5 +43,6 @@
     <ClCompile Include="src\Goob\Log.cpp">
       <Filter>Goob</Filter>
     </ClCompile>
+    <ClCompile Include="src\gbpch.cpp" />
   </ItemGroup>
 </Project>

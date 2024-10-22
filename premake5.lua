@@ -20,6 +20,9 @@ project "Goob"
    targetdir ("bin/" .. outputdir .. "/%{prj.name}") 
    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+   pchheader "gbpch.h"
+   pchsource "Goob/src/gbpch.cpp"
+
    files
    {
       "%{prj.name}/src/**.h",
@@ -28,13 +31,14 @@ project "Goob"
 
    includedirs
    {
-      "%{prj.name}/vendor/spdlog/include"
+      "%{prj.name}/src",
+      "Goob/vendor/spdlog/include"
    }
 
    filter "system:windows"
       cppdialect "C++17"
       staticruntime "On"
-      systemversion "10.0.22621.0"
+      systemversion "latest"
 
       defines
       {
@@ -77,8 +81,8 @@ project "Sandbox"
 
    includedirs
    {
-      "Goob/vendor/spdlog/include",
-      "Goob/src"
+      "Goob/src",
+      "Goob/vendor/spdlog/include"
    }
 
    links
@@ -89,7 +93,7 @@ project "Sandbox"
    filter "system:windows"
       cppdialect "C++17"
       staticruntime "On"
-      systemversion "10.0.22621.0"
+      systemversion "latest"
 
       defines
       {

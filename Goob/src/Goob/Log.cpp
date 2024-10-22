@@ -1,3 +1,4 @@
+#include "gbpch.h"
 #include "Log.h"
 
 namespace Goob
