@@ -13,6 +13,8 @@
 #include <unordered_set>
 
 
+#include "Goob/Log.h"
+
 #ifdef GB_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

@@ -7,6 +7,12 @@
     <Filter Include="Goob\Events">
       <UniqueIdentifier>{B0235367-1CD9-CB5C-A5CD-C5331182C260}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Goob\Platform">
+      <UniqueIdentifier>{20D7C8A4-8C97-44DB-55D2-8D58C15189B7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Goob\Platform\Windows">
+      <UniqueIdentifier>{5AA14B85-C60D-0780-8F01-9FDDFB2C29E8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Goob.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Goob\Log.h">
       <Filter>Goob</Filter>
     </ClInclude>
+    <ClInclude Include="src\Goob\Platform\Windows\WindowsWindow.h">
+      <Filter>Goob\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Goob\Window.h">
+      <Filter>Goob</Filter>
+    </ClInclude>
     <ClInclude Include="src\gbpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Goob\Log.cpp">
       <Filter>Goob</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Goob\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Goob\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\gbpch.cpp" />
   </ItemGroup>

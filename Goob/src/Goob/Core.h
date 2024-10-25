@@ -11,3 +11,11 @@
 #endif
 
 #define BIT(x) (1 << x)
+
+#ifdef GB_ENABLE_ASSERTS
+#define GOOB_ASSERT(x, ...) {if (!(x)) {GOOB_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
+#define GOOB_CORE_ASSERT(x, ...) {if(!(x)) {GOOB_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak();}}
+#else
+#define GOOB_ASSERT(x, ...)
+#define GOOB_CORE_ASSERT(x, ...)
+#endif

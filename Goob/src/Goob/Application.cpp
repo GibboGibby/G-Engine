@@ -6,11 +6,14 @@
 
 #include <iostream>
 
+#include <GLFW/glfw3.h>
+
 namespace Goob
 {
 
 	Application::Application()
 	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -25,11 +28,11 @@ namespace Goob
 		{
 			GOOB_TRACE("({}) - Category Application", e);
 		}
-		while (true)
+		while (m_Running)
 		{
-			if (GetAsyncKeyState(VK_ESCAPE) & 0x8000) {
-				break;
-			}
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
 	}
 }
